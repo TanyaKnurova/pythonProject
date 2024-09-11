@@ -13,7 +13,6 @@ with open('recipes.txt', encoding='utf-8') as f:
             products.append({'ingredient_name': ingredient_name,
                              'quantity': int(quantity),
                              'measure': measure})
-
         f.readline()
         cook_book[name_dish] = products
 pprint(cook_book)
@@ -32,7 +31,6 @@ def get_shop_list_by_dishes(dishes, person_count):
                     shop_list[ingredient['ingredient_name']]['quantity'] = (
                             shop_list)[ingredient['ingredient_name']]['quantity'] + \
                             ingredient['quantity'] * person_count
-
         else:
             print (f'Такого блюда нет в списке!')
     return shop_list
